@@ -8,14 +8,40 @@ const colorChange = (color) => {
   container.style.backgroundColor = color;
   currentColor.innerText = color;
 };
+const colorsArr = [
+  "red",
+  "blue",
+  "green",
+  "yellow",
+  "orange",
+  "purple",
+  "pink",
+  "brown",
+  "black",
+  "white",
+  "gray",
+  "cyan",
+  "magenta",
+  "lime",
+  "navy",
+  "teal",
+  "maroon",
+  "olive",
+  "gold",
+  "silver",
+  "violet",
+];
 
+const genarateRandomColor = () => {
+  let val = Math.floor(Math.random() * colorsArr.length);
+  return colorsArr[val];
+};
 const applyBtnHandle = () => {
-  console.log(text.value);
   colorChange(text.value);
 };
 applyBtn.addEventListener("click", applyBtnHandle);
 
 const randomBtnHandle = () => {
-  console.log("random btn");
+  colorChange(genarateRandomColor());
 };
 randomBtn.addEventListener("click", randomBtnHandle);
