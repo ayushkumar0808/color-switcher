@@ -10,7 +10,6 @@ body {
 }
 .container {
   height: 100vh;
-  /* margin:; */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -27,11 +26,15 @@ h1 {
   background-color: white;
   border-radius: 8px;
 }
-.box {
+.btn {
   height: 35px;
   width: 130px;
   border: none;
   background-color: aquamarine;
+  transition: all 0.5s ease;
+}
+.btn:active {
+  transform: scale(0.95);
 }
 #text {
   width: 300px;
